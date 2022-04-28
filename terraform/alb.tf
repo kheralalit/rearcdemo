@@ -37,19 +37,3 @@ resource "aws_alb_listener" "front_end" {
     type             = "forward"
   }
 }
-/*
-resource "aws_route53_record" "terraform" {
-  zone_id = data.aws_route53_zone.zone.zone_id
-  name    = "devopsethiraj.tech"
-  type    = "A"
-  alias {
-    name                   = "${aws_alb.main.dns_name}"
-    zone_id                = "${aws_alb.main.zone_id}"
-    evaluate_target_health = true
-  }
-}
-
-data "aws_route53_zone" "zone" {
-  name = "devopsethiraj.tech"
-}
-*/
